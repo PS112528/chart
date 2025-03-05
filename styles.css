@@ -1,0 +1,93 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #f1f3f6;
+    --text-color: #333;
+    --border-color: #e0e4e8;
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+.container-fluid {
+    max-width: 1400px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+.card-title {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.card-body {
+    height: 300px; /* Fixed height for charts */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
+
+.dashboard-header {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: start !important;
+    }
+
+    .header-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .chart-card, .data-table-card {
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        height: 250px; /* Slightly smaller on mobile */
+    }
+}
